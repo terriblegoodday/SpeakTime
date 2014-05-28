@@ -1,0 +1,9 @@
+Package: com.callumryan.speaktime
+Name: SpeakTime
+Depends: mobilesubstrate, libactivator 
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An activator action to read the time
+Maintainer: Callum Ryan
+Author: Callum Ryan
+Section: Tweaks
