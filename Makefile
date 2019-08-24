@@ -1,15 +1,19 @@
-GO_EASY_ON_ME=1
-DEBUG = 0
-THEOS_DEVICE_IP=192.168.1.101
-ARCHS = armv7 arm64
-include /opt/theos/makefiles/common.mk
+THEOS_DEVICE_IP=10.0.0.104
+DEBUG = 1
+FINALPACKAGE = 0
 
-TWEAK_NAME = SpeakTime
-SpeakTime_FILES = Tweak.xm
-SpeakTime_FRAMEWORKS = UIKit AVFoundation
-SpeakTime_LDFLAGS = -lactivator -Ltheos/lib 
+include $(THEOS)/makefiles/common.mk
 
-include /opt/theos/makefiles/tweak.mk
+TWEAK_NAME = SpotlightActivator
+SpotlightActivator_FILES = Tweak.xm
+SpotlightActivator_FRAMEWORKS = UIKit AVFoundation AudioToolbox
+SpotlightActivator_LIBRARIES = activator
+SpotlightActivator_LDFLAGS = -lactivator -Ltheos/lib 
+
+include $(THEOS_MAKE_PATH)/tweak.mk
+
+export COPYFILE_DISABLE = 1
 
 after-install::
 	install.exec "killall -9 SpringBoard"
+

@@ -1,9 +1,10 @@
 Package: com.terriblegoodday.spotlightactivator
 Name: SpotlightActviator
 Depends: mobilesubstrate, libactivator 
-Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An activator action to reveal Spotlight
+Description: An activator action to open spotlight
 Maintainer: terriblegoodday
 Author: terriblegoodday
 Section: Tweaks
+Version: 0.0.1-2+debug
+Installed-Size: 152
